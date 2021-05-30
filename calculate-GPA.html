@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Calculate GPA | Developed and Designed by nonsogospel</title>
+        <!-- Bootstrap CSS -->
+		<script src="https://kit.fontawesome.com/2ae6dcc1c6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css2/bootstrap.css">
+        <link rel="stylesheet" href="css2/font-awesome.min.css">
+		
+        <!-- main css -->
+        <link rel="stylesheet" href="css2/style.css">
+        <link rel="stylesheet" href="css2/responsive.css">
+		<!--the HEART of the WEB APP  -->
+		<link rel="stylesheet" href="main/index.css">
+
+    <!--External LINKS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu" id="mainNav">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="about-us.html"><i class="fas fa-donate"></i>Donate</a></li> 
+						
+								
+						
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div class="banner_inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="home_left_img">
+								<img src="img/banner/home-left-1.png" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="banner_content"><br /><br /><br /><br /><br />
+<!-- Placenta for Enter Courses - lol, sounds funny,-->
+<div>
+    <p style="font-family:FreeSans; color:rgb(4, 4, 136)">ENTER COURSE:</p><input type="text" id="course" placeholder="enter course code" style="font-family:Times New Roman">
+</div>
+<div id="tab1">
+  <div id="thecourses" style="color:green; text-transform:uppercase; font-family:Impact"><b><h4>courses</h4></b></div>
+
+</div>
+
+
+
+
+<!-- Placenta for the Grade, lol-->
+<br>  
+<br>
+<p style="font-family:FreeSans; color:rgb(4, 4, 136)">SELECT GRADE:</p><select id="grade" style="width: 50px !important; min-width: 80px; max-width:80px;">
+  <option></option>   
+  <option style="font-family:Times New Roman">A</option>
+  <option style="font-family:Times New Roman">AB</option>
+  <option style="font-family:Times New Roman">B</option>
+  <option style="font-family:Times New Roman">BC</option>
+  <option style="font-family:Times New Roman">C</option>
+  <option style="font-family:Times New Roman">F</option>
+ </select>
+ <br></p>
+ <div id="tab2">
+    <div id="thegrades" style="color:green; text-transform:uppercase; font-family:Impact"><b><h4>grades</h4></b></div>
+  
+  </div> 
+
+<!-- Placenta for the Units, lol-->
+
+      <p style="font-family:FreeSans; color:rgb(4, 4, 136)">SELECT UNIT:</p><select id="unit" style="width: 50px !important; min-width: 80px; max-width:80px;">
+        <option style="font-family:Times New Roman"></option>   
+        <option style="font-family:Times New Roman">1</option>
+        <option style="font-family:Times New Roman">2</option>
+        <option style="font-family:Times New Roman">3</option>
+        <option style="font-family:Times New Roman">4</option>
+       </select>
+       <br></p>
+       <div id="tab3">
+        <div id="theunit" style="color:green; text-transform:uppercase; font-family:Impact"><b><h4>credit unit</h4></b></div>
+
+    </div>
+    
+      <button id="add" onclick="add()" style="border-radius:12px; border:none; padding:20px; text-align: center; display:inline-block; font-size: 16px; margin:4px 2px; cursor:pointer; font-family:FreeSans; color:rgb(4, 4, 136)">ADD</button>
+
+      <br><br>
+      <button id="calculate" class="calculate" onclick="calculate()" style="border-radius:12px; border:none; padding:20px; text-align: center; display:inline-block; font-size: 18px; margin:4px 2px; cursor:pointer; font-family:FreeSans; color:white; background-color:green">CALCULATE</button>
+      <button id="resetbtn" onclick="resetbtn()" style="border-radius:15px; border:none; padding:20px; text-align: center; display:inline-block; font-size: 18px; margin:4px 2px; cursor:pointer; font-family:FreeSans; color:white; background-color:red">RESET</button>
+
+      <div id="resulttab" style="color:green; text-transform:uppercase; font-family:Impact">
+        <div id="gparesult" style="color:green; text-transform:uppercase; font-family:Impact"><b><h4>GPA RESULT</h4></b></div>
+        
+       
+    </div>
+    <br><br>
+    
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="main/index.js"></script>
+        <script src="js2/jquery-3.2.1.min.js"></script>
+        <script src="js2/bootstrap.min.js"></script>
+
+        
+    </body>
+</html>
